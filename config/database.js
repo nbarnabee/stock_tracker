@@ -7,7 +7,7 @@ establishConnection = function (callback) {
   MongoClient.connect(process.env.DB_STRING, function (err, db) {
     assert.equal(null, err);
     connection = db;
-    console.log(`Connection established`);
+    console.log(`Database connection established`);
     if (typeof callback === "function" && callback) callback(connection);
   });
 };
